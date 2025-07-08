@@ -1,8 +1,8 @@
 # Web Development Project 4 - Veni Vici Cat StumbleUpon
 
-Submitted by: **Your Name Here**
+Submitted by: **Gloriele Mendoza**
 
-This web app: **insert description**
+This web app: **randomly shows different villagers or characters from the video game series Animal Crossing. When the button is clicked, a random villager's image is shown along with their name and 4 attributes. Clicking on an attribute places it in the "banned list", and clicking the button will not allow a villager with that same attribute to show up.**
 
 Time spent: **X** hours spent in total
 
