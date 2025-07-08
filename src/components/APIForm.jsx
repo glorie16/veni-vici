@@ -9,6 +9,7 @@ const APIForm = ({ selectedVillager, onClick }) => {
 
             {selectedVillager && (
                 <div>
+                    
                     <h3>{selectedVillager.name['name-USen']}</h3>
                     <img src={selectedVillager.image_uri} alt={selectedVillager.name['name-USen']} width="150" />
                     <ul>
