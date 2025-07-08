@@ -1,0 +1,19 @@
+.Characteristics-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.picture{
+    object-fit: contain;
+    width: 270px;
+    height: 360px;
+}
+
+.Characteristics{
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+

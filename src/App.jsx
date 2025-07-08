@@ -5,8 +5,6 @@ import APIForm from './components/APIForm'
 import PastList from './components/PastList'
 import BanList from './components/BanList'
 
-
-
 function App() {
   const [villagers, setVillagers] = useState([])
   const [selectedVillager, setSelectedVillager] = useState(null)
@@ -15,22 +13,30 @@ function App() {
 
   useEffect(() => {
     const fetchVillagers = async () => {
-      try{
-      const res = await fetch('https://acnhapi.com/v1/villagers/');
+      try {
+        const apiKey = import.meta.env.VITE_APP_ACCESS_KEY;
+        const res = await fetch("https://api.nookipedia.com/villagers",
+          {
+            //format needed for nookipedia API
+            headers: {
+              "X-API-KEY": apiKey,
+              "X-API-HOST": "api.nookipedia.com",
+              "Accept": "application/json"
+            }
+          });
         const data = await res.json();
         const villagerArray = Object.values(data);
-        console.log(villagerArray);
+        setVillagers(villagerArray);
       } catch (error) {
         console.error("Error fetching villagers:", error);
       }
-      setVillagers(villagerArray);
     };
     fetchVillagers();
   }, []);
 
   const generateVillager = () => {
     if(villagers.length === 0) {
-      alert("No villagers available to generate.");
+      //alert("No villagers available to generate.");
       return;
     }
     else {
@@ -38,7 +44,7 @@ function App() {
       const villager = villagers[randomIndex];
       setSelectedVillager(villager);
       setPastVillagers(prev => [...prev, villager]);
-      console.log(`Generated Villager: ${villager.name['name-USen']}`);
+      console.log(`Generated Villager: ${villager.name}`);
     }
   }
 

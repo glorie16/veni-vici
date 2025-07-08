@@ -1,21 +1,23 @@
 import { useState, useEffect } from 'react'
+import './components.css';
 
 const APIForm = ({ selectedVillager, onClick }) => {
     return (
-        <div>
+        <div className="APIForm">
             <h2>Animal Crossing Villager Generator</h2>
-            <h3>Click the button to check out a random villager from Animal Crossing: New Horizons!</h3>
+            <h3>Click the button to check out a random villager from the Animal Crossing series!</h3>
             <button onClick={onClick}>Generate Villager</button>
 
             {selectedVillager && (
                 <div>
-                    
-                    <h3>{selectedVillager.name['name-USen']}</h3>
-                    <img src={selectedVillager.image_uri} alt={selectedVillager.name['name-USen']} width="150" />
-                    <ul>
-                        <li>Species: {selectedVillager.species}</li>
-                        <li>Personality: {selectedVillager.personality}</li>
-                        <li>Gender: {selectedVillager.gender}</li>
+
+                    <h3>{selectedVillager.name}</h3>
+                    <img className="picture"src={selectedVillager.image_url} alt={selectedVillager.name} />
+                    <ul className="Characteristics-list">
+                        <li className="Characteristics">Species: {selectedVillager.species}</li>
+                        <li className="Characteristics">Personality: {selectedVillager.personality}</li>
+                        <li className="Characteristics">Gender: {selectedVillager.gender}</li>
+                        <li className="Characteristics">Zodiac Sign: {selectedVillager.sign}</li>
                     </ul>
                 </div>
             )}
