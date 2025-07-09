@@ -48,7 +48,7 @@ Here's a walkthrough of implemented user stories:
 I chose to do a video recording instead since it took longer to showcase the features of this project.
 
 LINK TO YOUTUBE VIDEO:
-
+https://youtu.be/rPTkHEw1Vd0
 
 Recorded using Zoom
 Uploaded onto Youtube
@@ -60,6 +60,7 @@ Describe any challenges encountered while building the app.
 - It was also hard to get the traits and image to render properly.
 - It was also so difficult to do the banning and unbanning logic, that took the most time.
 - Overall, this was the most challenging project by far!
+- Link to the documentation for the API I used: https://api.nookipedia.com/doc
 
 ## License
 
