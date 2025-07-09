@@ -49,8 +49,8 @@ I chose to do a video recording instead since it took longer to showcase the fea
 LINK TO YOUTUBE VIDEO:
 https://youtu.be/rPTkHEw1Vd0
 
-Recorded using Zoom
-Uploaded onto Youtube
+- Recorded using Zoom
+- Uploaded onto Youtube
 
 ## Notes
 
