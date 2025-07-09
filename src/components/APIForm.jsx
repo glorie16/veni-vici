@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './components.css';
 
-const APIForm = ({ selectedVillager, onClick }) => {
+const APIForm = ({ selectedVillager, onClick, onBan, bannedTraits }) => {
     return (
         <div className="APIForm">
             <h2>Animal Crossing Villager Generator</h2>
@@ -14,10 +14,34 @@ const APIForm = ({ selectedVillager, onClick }) => {
                     <h3>{selectedVillager.name}</h3>
                     <img className="picture"src={selectedVillager.image_url} alt={selectedVillager.name} />
                     <ul className="Characteristics-list">
-                        <li className="Characteristics">Species: {selectedVillager.species}</li>
-                        <li className="Characteristics">Personality: {selectedVillager.personality}</li>
-                        <li className="Characteristics">Gender: {selectedVillager.gender}</li>
-                        <li className="Characteristics">Zodiac Sign: {selectedVillager.sign}</li>
+                        {!bannedTraits.includes(`Species: ${selectedVillager.species}`) && (
+                            <button
+                                className="Characteristics"
+                                onClick={() => onBan(`Species: ${selectedVillager.species}`)}>
+                                Species: {selectedVillager.species}
+                            </button>
+                        )}
+                        {!bannedTraits.includes(`Personality: ${selectedVillager.personality}`) && (
+                            <button
+                                className="Characteristics"
+                                onClick={() => onBan(`Personality: ${selectedVillager.personality}`)}>
+                                Personality: {selectedVillager.personality}
+                            </button>
+                        )}
+                        {!bannedTraits.includes(`Gender: ${selectedVillager.gender}`) && (
+                            <button
+                                className="Characteristics"
+                                onClick={() => onBan(`Gender: ${selectedVillager.gender}`)}>
+                                Gender: {selectedVillager.gender}
+                            </button>
+                        )}
+                        {!bannedTraits.includes(`Zodiac Sign: ${selectedVillager.sign}`) && (
+                            <button
+                                className="Characteristics"
+                                onClick={() => onBan(`Zodiac Sign: ${selectedVillager.sign}`)}>
+                                Zodiac Sign: {selectedVillager.sign}
+                            </button>
+                        )}
                     </ul>
                 </div>
             )}
