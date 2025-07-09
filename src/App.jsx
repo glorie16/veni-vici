@@ -86,7 +86,7 @@ function App() {
   const handleUnban = (trait) => {
   setBannedTraits(prev => prev.filter(t => t !== trait));
 };
-
+  
   return (
     <div className="App">
       <div className="pastlist">
