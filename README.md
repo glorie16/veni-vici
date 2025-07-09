@@ -38,9 +38,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
-
-      - When the banned traits cause there to be no more villagers available, there's an alert that lets the user know.
+- When the banned traits cause there to be no more villagers available, there's an alert that lets the user know.
 
 ## Video Walkthrough
 
